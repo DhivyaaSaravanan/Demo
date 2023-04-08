@@ -1,0 +1,13 @@
+<h2><div class="title">Shopping Page</div></h2>
+<div class="content" role="main">
+  <div class="product">
+      <div class="col" *ngFor="let item of productList">
+      <img class="img-res" src="{{item.thumbnail}}">
+      <span><b><a routerLink="/product/{{item.title}}">{{item.title}}</a></b> - {{item.price|currency:'INR'}}</span>
+      </div>
+    </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
